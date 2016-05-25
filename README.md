@@ -202,3 +202,21 @@ val cust = new Customer("Cliff Richard",1850)
 println(cust.calculateOrderTaxValue(1850))
 
 ```
+
+###Getters/Setters
+```scala
+class Employee(){
+  private var _age = 0
+  var name = ""
+  
+  //Getter
+  def age = _age
+  
+  /Setter
+  def age_= (value:Int) : Unit = _age = value
+}
+
+var emp = new Employee
+emp.age=25
+println(emp.age)
+```
