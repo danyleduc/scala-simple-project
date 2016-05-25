@@ -278,3 +278,11 @@ res1: Int = 20
 res2: Int = 0
 
 ```
+
+#####Companion object
+The object keyword allows one to create a companion object for a class. The difference between an ordinary object and a companion object is that the latter has the same name as the name of a class. Hence, an association between the companion object is created.
+
+The screenshot example below shows that anyVal has only a single piece of storage (no matter how many instances are created) and that x1 and x2 are both accessing that same memory. To access elements of the companion object from methods of the class, you must give the name of the companion object (AnyObject), as in lines 8 and 9.
+
+
+
