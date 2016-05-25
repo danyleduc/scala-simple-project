@@ -284,5 +284,21 @@ The object keyword allows one to create a companion object for a class. The diff
 
 The screenshot example below shows that anyVal has only a single piece of storage (no matter how many instances are created) and that x1 and x2 are both accessing that same memory. To access elements of the companion object from methods of the class, you must give the name of the companion object (AnyObject), as in lines 8 and 9.
 
+```scala
+object AnyObject{
+  var anyVal:Int = 1 // single copy
+}
 
+class AnyObject {
+  def multiply(n:Int) = {
+    AnyObject.anyVal = AnyObject.anyVal * n
+    AnyObject.anyVal }
+  }
+
+var x1 = new AnyObject
+var x2 = new AnyObject
+x1.multiply(2)  //2
+x2.multiply(2)  //4
+x1.multiply(2)  //8  
+```
 
