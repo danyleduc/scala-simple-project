@@ -51,6 +51,7 @@ The call to println doesn’t produce a value, so the expression doesn’t eithe
 
 Compound Expressions
 -----------------
+```scala
 val isOfficeHour = {
   val officeStarts = 10
   val officeCloses = 20
@@ -62,7 +63,7 @@ val isOfficeHour = {
     false
   }
 }
-
+```
 it returns true
 
 
