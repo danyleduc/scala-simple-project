@@ -302,3 +302,59 @@ x2.multiply(2)  //4
 x1.multiply(2)  //8  
 ```
 
+#####Traits
+A Trait is a different approach to creating classes: it allows inheritance in small chunks rather than all in a single go, which is what happens when creating a subclass.
+
+Traits are small, logical concepts that allow one to easily “mix in” ideas to create a class.
+
+For this reason, they are often called mixin types. Trait typically represent a singular concept such as Color, Softness, Brittleness, etc.
+
+Important facts about Trait
+
+A trait definition looks like a class, but uses the trait keyword instead of class.
+To combine traits into a class, you always begin with the extends keyword, then add additional traits using the with keyword.
+A class can only inherit from a single concrete or abstract base class, but it can combine as many traits as you want. If there is no concrete or abstract base class, you still start with the extends keyword for the first trait, followed by the with keyword for the remaining traits.
+A freestanding trait cannot be instantiated; a Trait does not have a full-fledged constructor.
+If any of the fields and/or methods that a class extends lack definition or implementation, then Scala will insist that you include the abstract keyword.
+Here we have some of the simplest possible Trait and Class definitions:
+
+```scala
+trait Hardness
+trait Brittleness
+trait Color
+
+class Material
+
+class Metal extends Material with Hardness
+ with Texture with Hardness
+ 
+class Plastic extends Brittleness with Color
+ with Hardness
+```
+Traits can inherit from abstract or concrete classes. Traits can also inherit from other traits – see the screenshot below. Here are example of some traits that have defined some member variables:
+```scala
+trait SuperTrait {
+  def spt = "abc"
+}
+
+trait Subtrait1 extends SuperTrait{
+  def sut1 = "pqr"
+}
+
+trait Subtrait2 extends Subtrait1{
+  def sut2 = "fgh"
+}
+
+class AnyClass extends Subtrait2
+val myval = new AnyClass
+myval.spt
+myval.sut1
+myval.sut2
+
+//Output
+defined class AnyClass
+myval: AnyClass = AnyClass@39ce1cbb
+res0: String = abc
+res1: String = pqr
+res2: String = fgh
+```
