@@ -1,7 +1,7 @@
 # scala-simple-project
 
 https://blog.udemy.com/scala-tutorial-getting-started-with-scala/
-
+-----------------------
 ##Variable declaration : 
 
  val x:Int = 11
@@ -23,10 +23,10 @@ age: Int=35
 
 #####There is an exception to this rule when initializing vals and vars.
 #####When they are used as constructor parameters, they will be initialized when the object is instantiated. Also, derived classes can override vals declared inside the parent classes.
-
+-----------------------------
 ###Scala and the Usage of Semicolons
 str = "hello world"; println (str)
-
+------------------------
 ###Statements, Expressions and Operators
 var myValue = {
   val a=2
