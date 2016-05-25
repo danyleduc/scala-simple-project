@@ -69,3 +69,37 @@ Some constructs that are represented as statements in other languages are actual
 if-else structures are statements in most languages, but are expressions in Scala. The type of an if-else expression is the common supertype of all the branches.
 while loops are expressions in Scala that return a Unit. Similarly, for loops (not to be confused with for expressions) also return Unit.
 throw, used to generate exceptions, are expressions of type Nothing, which is a bottom type to all types in Scala.
+
+
+Operator Overloading
+--------------------------------------
+Scala also allows operator overloading. Operators are typically things such as +, -, and !.
+
+As a programmer, you would frequently use operators to perform arithmetic on numbers, or for manipulating Strings. Operator overloading, just like method overloading, allows you to redefine their behaviour for a particular type, and give them meaning for your own custom classes.
+
+
+```scala
+var a = 5
+for(a <- 1 to 10)
+{
+  println("Value of number : "+ a)
+}
+
+
+###Loops
+####for loop
+------------------
+//output
+a: Int = 5
+Value of number : 1
+Value of number : 2
+Value of number : 3
+Value of number : 4
+Value of number : 5
+Value of number : 6
+Value of number : 7
+Value of number : 8
+Value of number : 9
+Value of number : 10
+res2: Unit = ()
+```
