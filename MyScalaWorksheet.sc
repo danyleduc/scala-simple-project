@@ -127,7 +127,7 @@ anyStudent.selfIntroduction
 //the line of code immediately below
 
 //anyStudent.school  ----fails
-
+ 
 val billyBowden = new Surgeon("Billy", "Bowden", 44, "heart transplant", "scalpel")
 billyBowden.selfIntroduction
 
