@@ -257,3 +257,25 @@ show(new Vehicle(1000,4,"h1fg87"))
 show(new Car(800,4,"h1fg87","double edged foldable"))
 show(new MotorBike(2,"h1fg87","high bent"))
 ```
+
+####Scala object
+
+Scala’s object keyword defines something that looks roughly like a class, except you can’t create instances of an object – only one instance exists. By creating an object, one can logically group methods and fields
+```scala
+object X {
+  val mynumber = 2
+  def func1 = this.mynumber * 10
+  def func2 = this.mynumber / 20
+}
+
+//val obj = new X // Will not work !
+X.mynumber
+X.func1
+X.func2
+
+//Output
+res0: Int = 2
+res1: Int = 20
+res2: Int = 0
+
+```
