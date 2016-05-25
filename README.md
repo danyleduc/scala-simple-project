@@ -102,3 +102,21 @@ Value of number : 9
 Value of number : 10
 res2: Unit = ()
 ```
+
+###loop break
+```scala
+var number = 0
+var numList= List(1,2,3,4,5,6,7,8,9,10)
+
+var loop = new Breaks
+loop.breakable{
+  for(number <-numList)
+    {
+      println("value : "+number)
+      if(number==5)
+        {
+          loop.break()
+        }
+    }
+}
+```
