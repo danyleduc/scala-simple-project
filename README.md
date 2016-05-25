@@ -124,3 +124,37 @@ object BreakTest{
 }
 BreakTest.main()
 ```
+
+###Functional Programming in Scala
+----------------------------------
+Scala is a hybrid object-functional language: it supports both object-oriented and functional programming paradigms.
+You get the best of both worlds with Scala – the ability to use both.
+
+In Scala it is possible to have nested functions (functions within functions), a function returning a function, a function taking a function as parameters, and so on.
+
+The functional programming paradigm was explicitly created to support a purely functional approach to problem solving.
+
+In the world of functional/declarative style of programming, the goal when we develop is as follows:
+
+Focus on what to achieve in our code and ask the language to decide how to achieve the target
+Deal with non-mutating objects
+
+(see link above for java version)
+The equivalent Scala code using functional programming is shown in the code below:
+```scala
+var myList =  List(1,2,3,4)
+//(listElement,sum)=>listElement+sum is a lambda expression
+//(listElement,sum) is an anonymous function (with 2 parameters)
+//listElement+sum is the function body
+//Executed by each iteration, types of params and
+// return types are autom. inferred by Scala runtime
+val mySum = myList.reduce((listElement,sum)=>listElement+sum)
+println(mySum)
+
+//Output
+myList: List[Int] = List(1, 2, 3, 4)
+
+mySum: Int = 10
+10
+
+```
