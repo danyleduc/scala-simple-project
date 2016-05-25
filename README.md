@@ -78,6 +78,9 @@ Scala also allows operator overloading. Operators are typically things such as +
 As a programmer, you would frequently use operators to perform arithmetic on numbers, or for manipulating Strings. Operator overloading, just like method overloading, allows you to redefine their behaviour for a particular type, and give them meaning for your own custom classes.
 
 
+###Loops
+####for loop
+------------------
 ```scala
 var a = 5
 for(a <- 1 to 10)
@@ -85,10 +88,6 @@ for(a <- 1 to 10)
   println("Value of number : "+ a)
 }
 
-
-###Loops
-####for loop
-------------------
 //output
 a: Int = 5
 Value of number : 1
