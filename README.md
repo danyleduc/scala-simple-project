@@ -26,14 +26,12 @@ age: Int=35
 There is an exception to this rule when initializing vals and vars.
 When they are used as constructor parameters, they will be initialized when the object is instantiated. Also, derived classes can override vals declared inside the parent classes.
 
-###Scala and the Usage of Semicolons
--------------------------
+####Scala and the Usage of Semicolons
 ```scala
 str = "hello world"; println (str)
 ```
 
-###Statements, Expressions and Operators
--------------------------
+####Statements, Expressions and Operators
 ```scala
 var myValue = {
   val a=2
@@ -48,7 +46,7 @@ z: Unit = ()
 ```
 The call to println doesn’t produce a value, so the expression doesn’t either. Scala has a special type for an expression that doesn’t produce a value: it is called a Unit.
 
-###Compound Expressions
+####Compound Expressions
 ```scala
 val isOfficeHour = {
   val officeStarts = 10
@@ -72,16 +70,16 @@ while loops are expressions in Scala that return a Unit. Similarly, for loops (n
 throw, used to generate exceptions, are expressions of type Nothing, which is a bottom type to all types in Scala.
 
 
-###Operator Overloading
+####Operator Overloading
 
 Scala also allows operator overloading. Operators are typically things such as +, -, and !.
 
 As a programmer, you would frequently use operators to perform arithmetic on numbers, or for manipulating Strings. Operator overloading, just like method overloading, allows you to redefine their behaviour for a particular type, and give them meaning for your own custom classes.
 
 
-###Loops
+####Loops
 ------------------
-####for loop
+#####for loop
 ```scala
 var a = 5
 for(a <- 1 to 10)
@@ -104,7 +102,7 @@ Value of number : 10
 res2: Unit = ()
 ```
 
-####loop break
+#####loop break
 ```scala
 object BreakTest{
   def main() {
@@ -126,7 +124,7 @@ object BreakTest{
 BreakTest.main()
 ```
 
-###Functional Programming in Scala
+####Functional Programming in Scala
 ----------------------------------
 Scala is a hybrid object-functional language: it supports both object-oriented and functional programming paradigms.
 You get the best of both worlds with Scala – the ability to use both.
@@ -159,7 +157,7 @@ mySum: Int = 10
 
 ```
 
-####Functions
+#####Functions
 ```scala
 def functionName ([list of parameters]) : [return type] = {
    function body
@@ -175,7 +173,7 @@ Methods are implicitly declared abstract if you omit the equals sign and method 
 A function which does not return anything can return Unit, which is equivalent to void in Java and indicates that function does not return anything. The functions which do not return anything in Scala are called procedures.
 
 
-####Class construction
+#####Class construction
 ```scala
 class Customer(var fullName:String, var orderValue:Double){
   println("Inside primary constructor")
@@ -204,7 +202,7 @@ println(cust.calculateOrderTaxValue(1850))
 
 ```
 
-####Getters/Setters
+#####Getters/Setters
 ```scala
 class Employee(){
   private var _age = 0
@@ -222,7 +220,7 @@ emp.age=25
 println(emp.age)
 ```
 
-####Class inheritance
+#####Class inheritance
 ```scala
 class Vehicle(val enginePower:Integer,
               val wheelCount:Integer,
@@ -259,7 +257,7 @@ show(new Car(800,4,"h1fg87","double edged foldable"))
 show(new MotorBike(2,"h1fg87","high bent"))
 ```
 
-####Scala object
+#####Scala object
 
 Scala’s object keyword defines something that looks roughly like a class, except you can’t create instances of an object – only one instance exists. By creating an object, one can logically group methods and fields
 ```scala
