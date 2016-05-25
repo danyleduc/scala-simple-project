@@ -27,10 +27,13 @@ age: Int=35
 -----------------------------
 ###Scala and the Usage of Semicolons
 -------------------------
+
 str = "hello world"; println (str)
+
 ------------------------
 ###Statements, Expressions and Operators
 -------------------------
+
 var myValue = {
   val a=2
   val b = 3
@@ -38,6 +41,7 @@ var myValue = {
 }
 
 -------
+
 val z = println(105)
 Output:
 105
