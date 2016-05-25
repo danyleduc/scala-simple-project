@@ -203,7 +203,7 @@ println(cust.calculateOrderTaxValue(1850))
 
 ```
 
-###Getters/Setters
+####Getters/Setters
 ```scala
 class Employee(){
   private var _age = 0
@@ -219,4 +219,41 @@ class Employee(){
 var emp = new Employee
 emp.age=25
 println(emp.age)
+```
+
+####class inheritance
+```scala
+class Vehicle(val enginePower:Integer,
+              val wheelCount:Integer,
+              val chassisNumber:String){
+
+  def this(wheelCount:Integer, chassisNumber:String)=
+  this(100,wheelCount,chassisNumber)
+
+  def this(chassisNumber:String)=
+    this(105,4,chassisNumber)
+}
+
+class Car(enginePower:Integer,
+          wheelCount:Integer,chassisNumber: String,val wiperType:String)
+  extends Vehicle(enginePower,wheelCount,chassisNumber){
+
+  override def toString =
+    s"$enginePower: $wheelCount, $chassisNumber $wiperType"
+
+}
+
+class MotorBike(wheelCount:Integer,chassisNumber: String,val handleType:String)
+  extends Vehicle(wheelCount,chassisNumber){
+
+    override def toString =
+    s"$enginePower: $wheelCount, $chassisNumber $handleType"
+  }
+
+def show(vehicle: Vehicle)=
+s"engine power : ${vehicle.enginePower}, count of wheel: ${vehicle.wheelCount}, chassis number ${vehicle.chassisNumber}"
+
+show(new Vehicle(1000,4,"h1fg87"))
+show(new Car(800,4,"h1fg87","double edged foldable"))
+show(new MotorBike(2,"h1fg87","high bent"))
 ```
