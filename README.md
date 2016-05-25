@@ -4,6 +4,8 @@ https://blog.udemy.com/scala-tutorial-getting-started-with-scala/
 
 http://www.brunton-spall.co.uk/post/2011/12/02/map-map-and-flatmap-in-scala/
 
+https://twitter.github.io/scala_school/
+
 ###Declarations
 -------------------------
 
