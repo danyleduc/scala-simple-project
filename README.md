@@ -176,7 +176,7 @@ A function which does not return anything can return Unit, which is equivalent t
 
 ####Class construction
 ```scala
-class Customer(var fullName:String, val orderValue:Double){
+class Customer(var fullName:String, var orderValue:Double){
   println("Inside primary constructor")
   private val address = "My Address"
   var age = 0
