@@ -2,13 +2,15 @@
 
 https://blog.udemy.com/scala-tutorial-getting-started-with-scala/
 
-###Variable declaration
+###Declarations
 -------------------------
+
+####Variable declaration
 ```scala
  val x:Int = 11
 ```
-#### 2 types :
-####immutable (read-only):
+
+#####immutable (read-only):
 ```scala
 val distance: Double = 22
 val myarr:Array[String]=new Array(6)
@@ -16,13 +18,13 @@ myarr = new Array(5) //This will give a reassignment to val error.
 myarr (0)="Scala" //This does not give an error.
 ```
 
-####mutable (read-write):
+#####mutable (read-write):
 ```scala
 var temp:Int=22
 age: Int=35
  ```
-#####There is an exception to this rule when initializing vals and vars.
-#####When they are used as constructor parameters, they will be initialized when the object is instantiated. Also, derived classes can override vals declared inside the parent classes.
+There is an exception to this rule when initializing vals and vars.
+When they are used as constructor parameters, they will be initialized when the object is instantiated. Also, derived classes can override vals declared inside the parent classes.
 
 ###Scala and the Usage of Semicolons
 -------------------------
@@ -46,8 +48,7 @@ z: Unit = ()
 ```
 The call to println doesn’t produce a value, so the expression doesn’t either. Scala has a special type for an expression that doesn’t produce a value: it is called a Unit.
 
-Compound Expressions
------------------
+###Compound Expressions
 ```scala
 val isOfficeHour = {
   val officeStarts = 10
@@ -71,8 +72,8 @@ while loops are expressions in Scala that return a Unit. Similarly, for loops (n
 throw, used to generate exceptions, are expressions of type Nothing, which is a bottom type to all types in Scala.
 
 
-Operator Overloading
---------------------------------------
+###Operator Overloading
+
 Scala also allows operator overloading. Operators are typically things such as +, -, and !.
 
 As a programmer, you would frequently use operators to perform arithmetic on numbers, or for manipulating Strings. Operator overloading, just like method overloading, allows you to redefine their behaviour for a particular type, and give them meaning for your own custom classes.
@@ -103,7 +104,7 @@ Value of number : 10
 res2: Unit = ()
 ```
 
-###loop break
+####loop break
 ```scala
 object BreakTest{
   def main() {
