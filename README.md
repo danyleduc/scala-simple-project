@@ -42,8 +42,32 @@ var myValue = {
 
 
 
+
 val z = println(105)
 Output:
 105
 z: Unit = ()
 The call to println doesn’t produce a value, so the expression doesn’t either. Scala has a special type for an expression that doesn’t produce a value: it is called a Unit.
+
+Compound Expressions
+-----------------
+val isOfficeHour = {
+  val officeStarts = 10
+  val officeCloses = 20
+  println("Office hours: "+
+  officeStarts + " - " + officeCloses)
+  if(time>= officeStarts && time <= officeCloses){
+    true
+  }else{
+    false
+  }
+}
+
+it returns true
+
+
+Some constructs that are represented as statements in other languages are actually expressions in Scala. For example:
+
+if-else structures are statements in most languages, but are expressions in Scala. The type of an if-else expression is the common supertype of all the branches.
+while loops are expressions in Scala that return a Unit. Similarly, for loops (not to be confused with for expressions) also return Unit.
+throw, used to generate exceptions, are expressions of type Nothing, which is a bottom type to all types in Scala.
