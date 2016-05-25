@@ -79,8 +79,8 @@ As a programmer, you would frequently use operators to perform arithmetic on num
 
 
 ###Loops
-####for loop
 ------------------
+####for loop
 ```scala
 var a = 5
 for(a <- 1 to 10)
