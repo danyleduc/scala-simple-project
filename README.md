@@ -153,8 +153,52 @@ println(mySum)
 
 //Output
 myList: List[Int] = List(1, 2, 3, 4)
-
 mySum: Int = 10
 10
+
+```
+
+####Functions
+```scala
+def functionName ([list of parameters]) : [return type] = {
+   function body
+   return [expr]
+}
+```
+Here are a few basic facts about Scala functions:
+
+def is keyword indicating that it is a function.
+return type could be any valid scala data type, and the list of parameters would be a list of variables separated by comma; the list of parameters and return type are optional.
+Much like in Java, a return statement can be used (not mandatory, as you can see in the screenshot below) along with an expression in case function returns a value.
+Methods are implicitly declared abstract if you omit the equals sign and method body. The enclosing type is then itself abstract.
+A function which does not return anything can return Unit, which is equivalent to void in Java and indicates that function does not return anything. The functions which do not return anything in Scala are called procedures.
+
+
+####Class construction
+```scala
+class Customer(var fullName:String, val orderValue:Double){
+  println("Inside primary constructor")
+  private val address = "My Address"
+  var age = 0
+
+  //some methods
+  override def toString = s"$fullName has order value of $orderValue"
+  def printAddress { println(s"Address = $address")}
+  def calculateOrderTaxValue(orderValue:Double)={
+    val tax = orderValue * 0.5 ; tax;
+  }
+  
+  //call to method
+  printAddress
+  
+  //auxiliary constructor
+  def this(fullName:String){
+    this(fullName,1850)
+  }
+  println("still in the constructor")
+}
+
+val cust = new Customer("Cliff Richard",1850)
+println(cust.calculateOrderTaxValue(1850))
 
 ```
