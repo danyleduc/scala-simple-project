@@ -221,7 +221,7 @@ emp.age=25
 println(emp.age)
 ```
 
-####class inheritance
+####Class inheritance
 ```scala
 class Vehicle(val enginePower:Integer,
               val wheelCount:Integer,
