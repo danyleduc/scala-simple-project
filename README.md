@@ -2,19 +2,19 @@
 
 https://blog.udemy.com/scala-tutorial-getting-started-with-scala/
 
-#Variable declaration : 
+##Variable declaration : 
 
  val x:Int = 11
 
-## 2 types :
-immutable (read-only):
+### 2 types :
+####immutable (read-only):
 val distance: Double = 22
 
 val myarr:Array[String]=new Array(6)
 myarr = new Array(5) //This will give a reassignment to val error.
 myarr (0)="Scala" //This does not give an error.
 
-mutable (read-write):
+####mutable (read-write):
 var temp:Int=22
 age: Int=22
 
