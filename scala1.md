@@ -81,7 +81,7 @@ When they are used as constructor parameters, they will be initialized when the 
 ```scala
 str = "hello world"; println (str)
 ```
-
+ 
 ####Statements, Expressions and Operators
 ```scala
 var myValue = {
